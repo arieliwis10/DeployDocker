@@ -4,11 +4,11 @@ trigger:
       - main
 
 variables:
-  VM_IP_PUBLICA: '52.232.193.173'  # Se debe colocar la IP pública de tu máquina virtual
-  IMAGE_NAME: 'mybdmysql'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
-  ACR_NAME: 'mybdmysql'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
-  ACR_USERNAME: 'mybdmysql'  # Se debe colocar el Nombre de usuario del ACR
-  ACR_PASSWORD: '2JmH5lwFGKFaiHeIvhQhmv15Ln0nh6FiLTYj1vyiOk+ACRAY88Wx'  # Se debe colocar la Contraseña del ACR
+  VM_IP_PUBLICA: '64.236.241.192'  # Se debe colocar la IP pública de tu máquina virtual
+  IMAGE_NAME: 'miapp'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
+  ACR_NAME: 'miapp'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
+  ACR_USERNAME: 'miapp'  # Se debe colocar el Nombre de usuario del ACR
+  ACR_PASSWORD: 'q6d1hCHxwSurU/JvQl37gFn33obpBlBIcA4/85hpOu+ACRAeNOpg'  # Se debe colocar la Contraseña del ACR
 
 stages:
   - stage: Deploy
@@ -91,4 +91,5 @@ stages:
                 - script: |
                     # Mostrar la URL para conectarse a MySQL
                     echo "Conectar a MySQL en la máquina virtual con la IP: ${VM_IP_PUBLICA}, puerto: 3306"
+
                   displayName: 'Mostrar detalles de conexión a MySQL'
